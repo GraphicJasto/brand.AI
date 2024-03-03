@@ -1,0 +1,158 @@
+
+  :root {
+    --background: hsl(0, 0%, 96%);
+    --tileColor: hsl(0, 0%, 99%);
+
+    --light: hsl(0, 0%, 94%);
+    --lightAccent_blue: hsl(216, 60%, 90%);
+    --accent_blue: hsl(216, 60%,70%);
+    --lightAccent_green: hsl(90, 60%, 90%);
+    --accent_green: hsl(90, 60%,70%);
+    --hover: hsl(0, 0%, 93%);
+
+    
+  }
+
+*{
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+}
+
+html{
+    
+    min-height:100vh;
+    scrollbar-width: none; /* "auto", "thin", "none" */
+    scrollbar-color: rgba(0, 0, 0, 0) rgba(255, 255, 255, 0); /* [pulgar] [pista] */
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background);
+    display: flex;
+    flex-flow: row nowrap;
+    min-height:100vh;
+    font-family: Inter tight;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 24px 24px 0;
+    overflow-y: hidden;
+    
+}
+
+#tileContainer {
+    height: 100%;
+    width: 100%;
+    max-width: 1440px;
+    gap: 16px;
+    
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-y: hidden;
+
+}
+
+
+.tile {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: clip;
+
+    shape-rendering:crispEdges;
+    
+
+   
+    height: 100%;
+    width: auto;
+
+    border-radius: 24px 24px 24px 24px;
+    transition: 1s cubic-bezier(0.05, 0.7, 0.1, 1.0);
+
+}
+
+
+
+.static {
+   max-width: 380px;
+   min-width: 340px;
+}
+
+.flex {
+    width: 100%;
+}
+
+.fill {
+   background-color: var(--tileColor);
+   
+}
+
+.tileContent {
+    height: auto;
+    width: 100%;
+    
+    overflow:scroll;
+
+    padding: 16px 16px 16px 16px;
+}
+
+
+.styleOff {
+    width: 0px !important;
+    opacity: 0%;
+    display: hidden;
+    
+   
+}
+
+.styleOn {
+    display: flex;
+    width: 100%;
+}
+
+/* Personaliza toda la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 8px; /* Ancho de la barra de desplazamiento */
+    
+}
+
+/* Personaliza el fondo de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+   display: none;
+   
+}
+
+/* Personaliza el indicador de desplazamiento (el "pulgar") */
+::-webkit-scrollbar-thumb {
+    background: rgba(128, 128, 128, 0.25); /* Color del pulgar */
+    border-radius: 1000px;
+}
+
+/* Cambia el color del pulgar al pasar el ratón */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(128, 128, 128, 0.45); /* Color del pulgar al pasar el ratón */
+}
+
+
+
+
+
+
+
+
+
+
+
